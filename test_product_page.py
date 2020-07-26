@@ -35,10 +35,9 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
 
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/hacking-exposed-wireless_208/"
-    page = MainPage(browser, link) #инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
-    page.open()                    #открываем страницу
-    open_basket = BasePage(browser, link)
-    open_basket.go_to_cart()
-    basket = BasketPage(browser, link)
-    basket.basket_is_empty() #Проверяем, что корзина пуста
-    basket.basket_is_empty_message() #Проверяем, что есть сообщение о том, что корзина пуста
+    page = BasePage(browser, link) #инициализируем класс BasePage чтобы использовать его методы
+    page.open() #Открываем страницу (link передаём, поэтому откроется та страница, ссылку на которую мы передали)             
+    page.go_to_cart() #используем метод (выполняем функцию) go_to_cart (переход в корзину) класса BasePage
+    basket = BasketPage(browser, link) #инициализируем класс BasketPage чтобы использовать его методы
+    basket.basket_is_empty() #Проверяем, что корзина пуста, используя метод basket_is_empty класса BasketPage
+    basket.basket_is_empty_message() #Проверяем, что есть сообщение о том, что корзина пуста, используя метод basket_is_empty класса BasketPage
