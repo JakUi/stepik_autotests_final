@@ -27,3 +27,15 @@ class ProductPageLocators():
     PRICE_PRODUCT_ADDED_IN_CART = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-info  fade in"] strong') #селектор на стоимость 
     #товара добавленного в корзину
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-success  fade in"]') #сеоектор на сообщение, что товар добавлен в корзину
+
+class BasePageLocators():
+
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    CART_LINK = (By.CSS_SELECTOR, ".basket-mini.pull-right.hidden-xs [href]")
+
+class BasketPageLocators():
+
+    BASKET_STATUS = (By.CSS_SELECTOR, "#content_inner")
+    PRODUCT = (By.CLASS_NAME, 'basket-items')
+
