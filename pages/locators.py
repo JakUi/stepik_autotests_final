@@ -1,5 +1,9 @@
 from selenium.webdriver.common.by import By
 
+class BasePageLocators():
+
+    LOGIN_LINK = (By.CSS_SELECTOR, '#login_link') #селектор на переход на страницу логина
+    CART_LINK = (By.XPATH, '//a[contains(text, "basket")]')
 
 class MainPageLocators(): #каждый селектор — это пара: как искать и что искать!
 
@@ -22,7 +26,9 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.CSS_SELECTOR, '[class="col-sm-6 product_main"] h1') #селектор на название товара
     PRODUCT_PRICE = (By.CSS_SELECTOR, '[class="price_color"]') #селектор на стоимость товара 
     ADD_TO_CART = (By.CSS_SELECTOR, '#add_to_basket_form') #селектор на кнопку "Добавить в корзину"
-    PRODUCT_ADDED_IN_CART = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-success  fade in"] strong') #селектор на название товара
-    #добавленного в корзину
-    PRICE_PRODUCT_ADDED_IN_CART = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-info  fade in"] strong') #селектор на стоимость 
-    #товара добавленного в корзину
+    PRODUCT_ADDED_IN_CART = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-success  fade in"] strong') #селектор на название товара добавленного в корзину
+    PRICE_PRODUCT_ADDED_IN_CART = (By.CSS_SELECTOR, '[class="alert alert-safe alert-noicon alert-info  fade in"] strong') #селектор на стоимость товара добавленного в корзину
+
+class BasketPageLocators():
+    
+    pass
