@@ -12,7 +12,8 @@ def browser(request):
     user_language = request.config.getoption("language")
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.Chrome(executable_path="C:\chromedriver", options=options)
+#    browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(25.0)
     yield browser
     browser.quit()

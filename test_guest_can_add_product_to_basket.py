@@ -15,7 +15,8 @@ import pytest
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer6",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
-def test_guest_can_add_product_to_cart(browser, links):
+@pytest.mark.need_review
+def test_guest_can_add_product_to_basket(browser, links):
     link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
     link = f'{links}'
     page = ProductPage(browser, link) #инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
