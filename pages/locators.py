@@ -4,6 +4,7 @@ class BasePageLocators():
 
     LOGIN_LINK = (By.CSS_SELECTOR, '#login_link') #селектор на переход на страницу логина
     CART_LINK = (By.XPATH, '//a[contains(text, "basket")]')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class MainPageLocators(): #каждый селектор — это пара: как искать и что искать!
 
@@ -18,7 +19,7 @@ class LoginPageLocators():
     LOGIN_ENTER = (By.CSS_SELECTOR, 'name="login_submit"') #Селектор на кнопку "Войти" в поле входа
     REG_EMAIL = (By.CSS_SELECTOR, '#id_registration-email')
     REG_PASS1 = (By.CSS_SELECTOR, '#id_registration-password1') #Селектор на ввод пароля в поле регистрации
-    REG_PASS2 = (By.CSS_SELECTOR, '#id_registration-password2') #Селектор на ввод пароля в поле регистрации
+    REG_PASS2 = (By.CSS_SELECTOR, '#id_registration-password2') #Селектор на повторение пароля в поле регистрации
     REG_ENTER = (By.CSS_SELECTOR, 'name="registration_submit"') #Селектор на кнопку "Зарегестироваться" в поле регистрации
 
 class ProductPageLocators():
