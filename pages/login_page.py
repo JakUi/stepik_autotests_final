@@ -3,7 +3,7 @@ from .locators import LoginPageLocators
 
 class LoginPage(BasePage):
     
-    def register_new_user(self)
+    def register_new_user(self):
         self.browser.find_element(*BasePageLocators.LOGIN_LINK).click()
         self.email_input = self.browser.find_element(*LoginPageLocators.REG_EMAIL)
         email = str(time.time()) + "@jakui.org"
